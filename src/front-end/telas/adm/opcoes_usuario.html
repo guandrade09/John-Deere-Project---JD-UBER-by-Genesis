@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="../../reset.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../../style/adm/opcoes_usuarios.css">
+    <link rel="stylesheet" href="../../style/menu.css">
+</head>
+<body>
+    <!-- Header com Menu Dinâmico -->
+    <header class="header">
+        <div id="menu-container" class="menu-container"></div>
+    </header>
+
+    <!-- Cabeçalho com Botão de Voltar -->
+    <section class="cabecalho">
+        <button class="botao__cabecalho" id="btnVoltar">
+            <img class="seta__esquerda" src="../../assets/seta__esquerda.png" alt="Voltar">
+            <h2 class="titulo__cabecalho">Usuários</h2>
+        </button>
+    </section>
+
+    <!-- Seção de Botões de Ação -->
+    <section class="botoes">
+        <button class="botao__acao" id="btnCadastro">
+            <img src="../../assets/cadastro.png" alt="Cadastro">
+            <p>Cadastro</p>
+        </button>
+        <button class="botao__acao" id="btnVerUsuarios">
+            <img src="../../assets/lupausuario.png" alt="Ver usuários">
+            <p>Ver usuários</p>
+        </button>
+    </section>
+
+    <!-- Scripts -->
+    <script src="../../voltar.js"></script>
+    <script src="../../menu.js"></script>
+    <script src="../../JS/checagem_adm.js" defer></script>
+    
+    <script>
+        
+        // Redirecionar para página de cadastro de usuários
+        document.getElementById('btnCadastro').addEventListener('click', function() {
+            window.location.href = 'cadastro.html';
+        });
+
+        // Redirecionar para página de visualização de usuários
+        document.getElementById('btnVerUsuarios').addEventListener('click', function() {
+            window.location.href = 'ver_usuarios.html';
+        });
+
+       
+    </script>
+</body>
+</html>

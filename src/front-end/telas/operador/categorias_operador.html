@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="stylesheet" href="../../style/operador/categorias__operador.css">
+    <link rel="stylesheet" href="../../style/menu.css">
+</head>
+<body>
+    <header class="header">
+        <div id="menu-container" class="menu-container"></div>
+    </header>
+    <h1 class="titulo">Todas categorias</h1>
+    <section class="itens">
+        <div class="itens__row">
+            <div class="itens__item">
+                <button class="btn" id="btnKits">
+                    <img src="../../assets/kits.png" alt="kits">
+                </button>
+                <h3 class="lista__item">Kits</h3>
+            </div>
+            <div class="itens__item">
+                <button class="btn" id="btnProblemas">
+                    <img src="../../assets/problemas.png" alt="problemas">
+                </button>
+                <h3 class="lista__item">Problemas</h3>
+            </div>
+        </div>
+        <div class="itens__row">
+            <div class="itens__item">
+                <button class="btn" id="btnTicket">
+                    <img src="../../assets/ticket.png" alt="ticket">
+                </button>
+                <h3 class="lista__item">Ticket</h3>
+            </div>
+        </div>
+    </section>
+    <script src="../../menu.js"></script>
+    <script src="../../JS/checagem_adm.js" defer></script>
+    <script>
+        document.getElementById('btnKits').addEventListener('click', function() {
+            window.location.href = 'pesquisa_kits-operador.html';
+        });
+
+        document.getElementById('btnProblemas').addEventListener('click', function() {
+            window.location.href = 'problemasdeproducao_operador.html';
+        });
+
+        document.getElementById('btnTicket').addEventListener('click', function() {
+            window.location.href = '../adm/ticket.html';
+        });
+    </script>
+</body>
+</html>

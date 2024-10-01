@@ -1,0 +1,162 @@
+/* Estilo do Menu */
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    display: none;
+    visibility: hidden;
+}
+
+/* Estilo do Header */
+.header {
+    color: #ffffff; /* Texto branco */
+    padding: 15px 0 15px 0 ;
+    position: relative; /* Permite o posicionamento absoluto dos filhos */
+    width: 100%; /* Largura total */
+    height: 3em; /* Altura do header */
+    z-index: 3; /* Sobrepõe o botão do menu */
+    font-family: Arial, sans-serif; /* Fonte */
+    display: flex; /* Utiliza Flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Ajusta a distribuição do espaço entre os itens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Estilo do botão do Menu */
+.bar {
+    position: absolute; /* Mantém o botão dentro do header */
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+    z-index: 2; /* Garante que o ícone do menu fique acima do menu */
+    display: flex; /* Usa Flexbox para alinhar os spans */
+    align-items: center; /* Alinha os spans verticalmente */
+    justify-content: center; /* Centraliza os spans horizontalmente */
+    top: 50%; /* Posiciona verticalmente no centro do header */
+    transform: translateY(-50%); /* Ajusta a posição para o centro exato */
+    margin-left: 0.5em;
+}
+
+/* Estilo dos spans no botão do Menu */
+.bar span {
+    position: absolute;
+    width: 45px;
+    height: 7px;
+    background: var(--Verde-principal);
+    border-radius: 100px;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.bar span.top {
+    top: 0;
+}
+
+.bar span.middle {
+    top: 17px;
+}
+
+.bar span.bottom {
+    bottom: 0;
+}
+
+/* Estilo quando o checkbox está marcado */
+input[type="checkbox"]:checked + .bar span.top {
+    transform: rotate(45deg);
+    transform-origin: top left;
+    width: 48px;
+    left: 5px;
+    background-color: #f1faee;
+}
+
+input[type="checkbox"]:checked + .bar span.bottom {
+    transform: rotate(-45deg);
+    transform-origin: top left;
+    width: 48px;
+    bottom: -1px;
+    box-shadow: 0 0 10px #495057;
+    background-color: #f1faee;
+}
+
+input[type="checkbox"]:checked + .bar span.middle {
+    transform: translateX(-20px);
+    opacity: 0;
+}
+
+/* Menu Sidebar */
+.menu {
+    position: fixed;
+    top: 0;
+    left: -200px; /* Escondido fora da tela inicialmente */
+    width: 200px;
+    height: 100%;
+    background-color: var(--Verde-principal);
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+    z-index: 1; /* Para garantir que o menu fique abaixo do botão */
+    opacity: 0; /* Invisível por padrão */
+    pointer-events: none; /* Desativa cliques quando o menu está fechado */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Estilo dos botões do Menu */
+.menu button {
+    margin-bottom: 50px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #f1faee;
+    border: none;
+    color: #495057;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.menu button:hover {
+    background-color: #e1e8ee;
+}
+
+/* Mostrar o menu quando o checkbox estiver marcado */
+input[type="checkbox"]:checked ~ .menu {
+    left: 0; /* Exibe o menu */
+    animation: slideIn 0.5s forwards; /* Animação ao aparecer */
+    opacity: 1; /* Tornar visível ao marcar o checkbox */
+    pointer-events: auto; /* Ativa cliques quando o menu está aberto */
+}
+
+/* Definindo a animação slideIn */
+@keyframes slideIn {
+    0% {
+        left: -200px;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+/* Estilo da imagem */
+.Imagem__secao {
+    display: flex; /* Usa Flexbox para centralizar */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    width: 100%; /* Largura total do contêiner */
+    height: 100vh; /* Altura total do contêiner (ou outra altura desejada) */
+    position: relative; /* Para assegurar o alinhamento absoluto dos itens se necessário */
+}
+
+.imagem {
+    max-width: 50%; /* Ajusta a largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: auto; /* Garante que a imagem seja centralizada */
+}
+
+@media (min-width: 800px) {
+    .imagem {
+        max-width: 25%; /* Ajuste para telas maiores */
+    }
+}

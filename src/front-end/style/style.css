@@ -1,0 +1,19 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+:root {
+    --Verde-principal: #377e2d;
+    --Amarelo-principal: #f3e016;
+    --fonte-principal:"Jost", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.766); 
+    font-family: var(--fonte-principal);
+    overflow-x: hidden;
+}

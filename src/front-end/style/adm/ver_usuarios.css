@@ -1,0 +1,147 @@
+@import url(../../style.css);
+
+/* From Uiverse.io by Rodrypaladin */
+
+body {
+    margin: 0;
+   
+    
+    display: flex;
+    flex-direction: column;
+    
+   
+}
+
+.botao__cabecalho {
+    background: none;
+    display: flex;
+    align-items: center;
+    
+    font-size: 1.5em; /* Ajuste conforme necessário */
+    margin: 1em; /* Espaço ao redor do botão */
+    border: none;
+    font-weight: 600;
+    gap: 0.5em;
+}
+
+h1 {
+    font-size: 42px; /* Tamanho da fonte */
+    font-weight: 700; /* Peso da fonte */
+    margin: 20px 0 20px 10px; /* Margem acima e abaixo */
+    color: #000000; /* Cor do texto */
+    word-break: break-word; /* Quebra de texto longa */
+}
+
+.card {
+    width: 90%;
+    max-width: 700px;
+    background: var(--Verde-principal);
+    border-radius: 12px;
+    border: 5px solid black; /* Adiciona a borda preta ao redor da card */
+    overflow: hidden;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: 70vh; /* Altura fixa para permitir a rolagem interna */
+    margin-bottom: 4em;
+}
+
+.card__title {
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 25px;
+    background-color: var(--Verde-principal); /* Fundo verde claro no título */
+    word-break: break-word; /* Quebra de texto longa */
+}
+
+.card__data {
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Permite que o conteúdo ocupe o espaço restante */
+    overflow-y: auto; /* Torna a rolagem vertical interna */
+    background-color: var(--Verde-principal); /* Fundo verde claro */
+    padding: 10px; /* Adiciona um padding interno para o conteúdo */
+}
+
+.card__data .item {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 10px;
+    background-color: white;
+    border-bottom: 1px solid black; /* Adiciona a borda preta entre as linhas da tabela */
+    word-break: break-word; /* Quebra de texto longa */
+}
+
+.card__data .item:nth-child(even) {
+    background: rgb(234, 235, 234);
+}
+
+/* Estilo básico para as informações adicionais dos usuários */
+.user-details {
+    margin-top: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Espaçamento entre as linhas */
+    word-break: break-word; /* Quebra de texto longa */
+}
+
+/* Estilo básico para o item nome */
+.item span {
+    padding: 5px;
+    cursor: pointer; /* Mantém o cursor de pointer para indicar que é clicável */
+    word-break: break-word; /* Quebra de texto longa */
+}
+
+/* Remove a transição e a mudança de cor ao passar o mouse */
+.item span:hover {
+    background-color: inherit;
+}
+
+.barra__pesquisa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px; /* Adiciona um espaço abaixo da barra de pesquisa */
+}
+
+.searchBox {
+    display: flex;
+    width: 90vw;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    border-radius: 20px;
+    position: relative;
+    border: 2px solid green; /* Adiciona a borda verde */
+}
+
+.searchInput {
+    border: none;
+    background: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    padding: 12px 20px; /* Ajusta o padding para acomodar o ícone */
+    width: 80vw;
+    word-break: break-word; /* Quebra de texto longa */
+}
+
+.searchButton {
+    color: rgb(0, 0, 0);
+    position: absolute;
+    right: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background: none; /* Remove o fundo do botão */
+    border: none; /* Remove a borda do botão */
+    background-image: url('../../assets/pesquisa.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    pointer-events: none; /* Torna o botão não clicável */
+}

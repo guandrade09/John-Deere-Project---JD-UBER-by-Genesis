@@ -1,0 +1,161 @@
+/* Importar estilos principais */
+@import url(../../style.css);
+
+.botao__cabecalho {
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em; /* Ajuste conforme necessário */
+  margin: 1em 0 0.3em 1em; /* Espaço ao redor do botão */
+  border: none;
+  font-weight: 600;
+  gap: 0.31em;
+}
+
+.formulario {
+  display: flex;
+  justify-content: flex-start; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  flex-direction: column;
+  height: 100vh; /* Ajusta a altura para ocupar toda a altura da viewport */
+  margin: 0;  }
+  
+
+.form {
+  max-width: 90vw; /* Largura máxima relativa à viewport */
+  width: 100%; /* Ajusta a largura do formulário ao contêiner */
+  background-color: #fff;
+  padding: 1.25em; /* Padding relativo ao tamanho da fonte */
+  box-shadow: 0em 0em 0.5em rgba(52, 52, 53, 0.185);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.63em;
+  box-sizing: border-box; /* Inclui padding e border na largura e altura do elemento */
+}
+
+/* Ajusta o tamanho da fonte e margens para o título */
+.title {
+  text-align: center;
+  font-size: 2.5em; /* Tamanho da fonte relativo à largura da viewport */
+  margin-bottom: 1.25em; /* Espaço inferior relativo ao tamanho da fonte */
+  color: #1a202c;
+}
+
+.label {
+  color: rgb(0, 0, 0);
+  margin-bottom: 0.94em; /* Espaço inferior relativo ao tamanho da fonte */
+  font-size: 1.25em; /* Tamanho da fonte relativo à largura da viewport */
+}
+
+.input {
+  padding: 0.94em; /* Aumenta o padding conforme necessário */
+  margin-bottom: 0.94em; /* Espaço inferior relativo ao tamanho da fonte */
+  width: 95%; /* Ajusta a largura do input ao contêiner */
+  font-size: 0.75em; /* Tamanho da fonte relativo à largura da viewport */
+  color: #4a5568;
+  outline: none;
+  border: 0.06em solid transparent;
+  border-radius: 0.25em;
+  transition: all 0.2s ease-in-out;
+}
+
+.input:focus {
+  background-color: #fff;
+  box-shadow: 0 0 0 0.13em #cbd5e0;
+}
+
+.input:valid {
+  border: 0.06em solid green;
+}
+
+.input:invalid {
+  border: 0.06em solid rgba(14, 14, 14, 0.205);
+}
+
+.submit {
+  background-color: var(--Verde-principal);
+  color: #fff;
+  border: none;
+  border-radius: 0.25em;
+  padding: 0.63em 1.25em; /* Padding relativo ao tamanho da fonte */
+  font-size: 1.25em; /* Tamanho da fonte relativo à largura da viewport */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-top: 1.25em; /* Espaço superior relativo ao tamanho da fonte */
+}
+
+.radio-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.94em; /* Espaço entre os elementos relativo ao tamanho da fonte */
+  margin-left: -0.63em; /* Ajusta a margem para alinhar corretamente com o restante do layout */
+}
+
+.radio-input * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  margin-left: 0.63em;
+}
+
+.radio-input label {
+  display: flex;
+  align-items: center;
+  gap: 1.25em; /* Espaçamento entre o rádio e o texto usando unidade relativa */
+  padding: 0 1.25em; /* Padding horizontal relativo ao tamanho da fonte */
+  width: 90%; /* Largura relativa ao contêiner */
+  max-width: 25em; /* Largura máxima do label */
+  cursor: pointer;
+  height: auto; /* Altura automática para ajustar ao conteúdo */
+  position: relative;
+}
+
+.radio-input label::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Largura relativa ao label */
+  max-width: 25em; /* Largura máxima da borda */
+  height: 3.75em; /* Altura fixa da borda */
+  z-index: -1;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border-radius: 0.63em;
+  border: 0.13em solid transparent;
+}
+
+.radio-input label:hover::before {
+  transition: all 0.2s ease;
+  background-color: #2a2e3c;
+}
+
+.radio-input input[type="radio"] {
+  background-color: #202030;
+  appearance: none;
+  width: 1.25em; /* Tamanho relativo do rádio */
+  height: 1.25em; /* Tamanho relativo do rádio */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio-input input[type="radio"]:checked {
+  background-color: var(--Verde-principal);
+  -webkit-animation: pulse 0.7s fo
+}
+
+@media (min-width: 900px) {
+  .formulario {
+    width: 100%;
+    height: 10em; /* Ajusta a altura para o conteúdo */
+    max-height: 100em; /* Define uma altura máxima para evitar que ultrapasse a tela */
+  }
+
+  .form {
+    max-width: 50%;
+    max-height: auto;
+  }
+}

@@ -1,0 +1,133 @@
+@import url(../../style.css);
+
+.botao__cabecalho {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+   margin: 1em;
+    font-weight: 700;
+    font-size: 1.3em;
+
+
+    
+}
+
+.titulo__cabecalho {
+
+    font-size: 1.5em;
+}
+
+.mapa {
+
+    display: flex;
+    justify-content: center;
+}
+#map {
+    width: 80%;
+    height: 700px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+/* Estilo para a sobreposição dos pedidos */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1000;
+    display: none; /* Inicialmente escondido */
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.overlay h2 {
+    margin-top: 0;
+}
+
+.overlay ul {
+    list-style: none;
+    padding: 0;
+}
+
+.overlay button {
+    margin-top: 10px;
+}
+
+/* Estilo para a bolinha de notificação */
+#notificationBall {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    border-radius: 50%;
+    display: none; /* Inicialmente escondido */
+}
+
+/* Estilo para a animação de piscar */
+@keyframes blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* Estilo para o botão na parte inferior */
+.show-orders-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001; /* Deve estar acima da sobreposição */
+}
+
+.show-orders-button {
+
+    margin: 10px 15px 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    width: 20vw;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Adiciona a sombra aos botões */
+}
+
+.accept-button-class {
+
+    margin: 10px 15px 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    background-color: var(--Verde-principal);
+    border: none;
+    border-radius: 8px;
+    width: 20vw;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Adiciona a sombra aos botões */
+    color: #ffffff;
+}
+
+li {
+
+    margin: 10px 15px 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8em 0 0.8em 0.4em;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    width: 95%;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Adiciona a sombra aos botões */
+}
+

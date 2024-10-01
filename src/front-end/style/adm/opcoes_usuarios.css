@@ -1,0 +1,68 @@
+/* Importar estilos principais */
+@import url(../../style.css);
+
+body {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove paddings padrão */
+}
+
+.botao__cabecalho {
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em; /* Ajuste com unidade relativa para responsividade */
+    margin: 1em; /* Espaço ao redor do botão */
+    border: none;
+    font-weight: 600;
+    gap: 0.5em;
+    overflow: hidden; /* Impede que o conteúdo saia do botão */
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw; /* Espaço entre os botões usando unidade relativa */
+    
+    
+}
+
+.botoes button {
+    background: none;
+    border: 2px solid var(--Verde-principal);
+    border-radius: 12px; /* Borda com pontas arredondadas */
+    box-shadow: 0 4px 8px rgba(36, 201, 44, 0.548); /* Sombra fraca */
+    cursor: pointer;
+    width: 60vw; /* Largura do botão em porcentagem da largura da viewport */
+    height: 30vw; /* Altura do botão em porcentagem da largura da viewport */
+    max-width: 400px; /* Limita a largura máxima do botão */
+    max-height: 200px; /* Limita a altura máxima do botão */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    text-align: center;
+    padding: 0; /* Remove o padding para evitar distorções */
+    box-sizing: border-box; /* Inclui a borda e o padding no cálculo da largura e altura */
+    position: relative; /* Necessário para garantir o layout correto dos filhos */
+}
+
+.botoes img {
+    width: 30%; /* Ajusta o tamanho da imagem para ser proporcional ao botão */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: contain; /* Garante que a imagem se ajuste dentro do botão sem cortar */
+}
+
+.botoes p {
+    margin: 1vw 0 0; /* Ajusta as margens com unidade relativa */
+    font-size: 2vw; /* Ajusta o tamanho da fonte com unidade relativa */
+    font-weight: 1000;
+}
+
+.botao__acao {
+    overflow: hidden; /* Garante que o conteúdo não saia do contêiner */
+}

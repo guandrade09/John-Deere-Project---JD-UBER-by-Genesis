@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="stylesheet" href="../../style/rebocador/categoria_rebocador.css">
+    <link rel="stylesheet" href="../../style/menu.css">
+</head>
+
+<body>
+    <header class="header">
+        <div id="menu-container" class="menu-container"></div>
+    </header>
+
+    <h1 class="titulo">Todas categorias</h1>
+
+    <section class="itens">
+        <div class="itens__item">
+            <button class="btn" id="btnRota">
+                <img src="../../assets/rota.png" alt="rotas">
+            </button>
+            <h3 class="lista__item">Rotas</h3>
+        </div>
+        <div class="itens__item">
+            <button class="btn" id="btnProblema">
+                <img src="../../assets/problemas.png" alt="problemas">
+            </button>
+            <h3 class="lista__item">Problemas</h3>
+        </div>
+        <div class="itens__item">
+            <button class="btn" id="btnTicket">
+                <img src="../../assets/ticket.png" alt="ticket">
+            </button>
+            <h3 class="lista__item">Ticket</h3>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('btnProblema').addEventListener('click', function() {
+            window.location.href = 'problemasproducao_rebocador.html';
+        });
+
+        document.getElementById('btnTicket').addEventListener('click', function() {
+            window.location.href = '../adm/ticket.html';
+        });
+
+        document.getElementById('btnRota').addEventListener('click', function() {
+            window.location.href = 'mapa.html';
+        });
+    </script>
+
+    <script src="../../menu.js"></script>
+    <script src="../../JS/checagem_adm.js" defer></script>
+</body>
+
+</html>

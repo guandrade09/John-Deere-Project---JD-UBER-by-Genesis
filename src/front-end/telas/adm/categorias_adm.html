@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- CSS Reset e Estilos -->
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="stylesheet" href="../../style/adm/categoria_adm.css">
+    <link rel="stylesheet" href="../../style/menu.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div id="menu-container" class="menu-container"></div>
+    </header>
+
+    <!-- Título Principal -->
+    <h1 class="titulo">Todas categorias</h1>
+
+    <!-- Seção de Itens -->
+    <section class="itens">
+        <!-- Linha de Itens -->
+        <div class="itens__row">
+            <div class="itens__item">
+                <button class="btn" data-target="../operador/pesquisa_kits-operador.html">
+                    <img src="../../assets/kits.png" alt="kits">
+                </button>
+                <h3 class="lista__item">Kits</h3>
+            </div>
+            <div class="itens__item">
+                <button class="btn" data-target="../adm/ticket.html">
+                    <img src="../../assets/ticket.png" alt="ticket">
+                </button>
+                <h3 class="lista__item">Ticket</h3>
+            </div>
+        </div>
+
+        <!-- Outra Linha de Itens -->
+        <div class="itens__row">
+            <div class="itens__item">
+                <button class="btn" data-target="../rebocador/mapa.html">
+                    <img src="../../assets/rota.png" alt="rotas">
+                </button>
+                <h3 class="lista__item">Rotas</h3>
+            </div>
+            <div class="itens__item">
+                <button class="btn" data-target="opcoes_usuario.html">
+                    <img src="../../assets/users.png" alt="usuarios">
+                </button>
+                <h3 class="lista__item">Usuários</h3>
+            </div>
+        </div>
+
+        <!-- Outra Linha de Itens -->
+        <div class="itens__row">
+            <div class="itens__item">
+                <button class="btn" data-target="problemasdeproducao_adm.html">
+                    <img src="../../assets/problemas.png" alt="problemas">
+                </button>
+                <h3 class="lista__item">Problemas</h3>
+            </div>
+            <div class="itens__item"></div>
+        </div>
+    </section>
+
+    <!-- Scripts Firebase e JavaScript -->
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-database-compat.js" defer></script>
+    <script src="../../firebase-database.js" defer></script>
+    <script src="../../JS/checagem_adm.js" defer></script>
+    <script src="../../menu.js" defer></script>
+
+    <script>
+        // Função para adicionar eventos de clique
+        function addNavigationEvents() {
+            document.querySelectorAll('.btn[data-target]').forEach(button => {
+                button.addEventListener('click', function () {
+                    const target = this.getAttribute('data-target');
+                    if (target) {
+                        window.location.href = target;
+                    }
+                });
+            });
+        }
+
+        // Executar ao carregar o DOM
+        document.addEventListener("DOMContentLoaded", function () {
+            loadMenu();
+            addNavigationEvents();
+        });
+    </script>
+</body>
+</html>

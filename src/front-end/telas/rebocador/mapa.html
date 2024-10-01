@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela do Rebocador</title>
+    <link rel="stylesheet" href="../../reset.css">  
+    <link rel="stylesheet" href="../../style/rebocador/mapa.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="../../style/menu.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+
+
+    <style>
+       
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div id="menu-container" class="menu-container"></div>
+    </header>
+    <header class="cabecalho">
+        <button class="botao__cabecalho" id="btnVoltar">
+            <img class="seta__esquerda" src="../../assets/seta__esquerda.png">
+            <h2 class="titulo__cabecalho">Rotas</h2>
+        </button>
+    
+    <main>
+        <section class="mapa">
+        <div id="map"></div> <!-- Mapa será renderizado aqui -->
+    </section>
+
+        <div class="overlay" id="orderDetails">
+            <button   onclick="toggleOrderList()" class="botao__cabecalho" id="btnVoltar">
+            <img class="seta__esquerda" src="../../assets/seta__esquerda.png">
+            <h2 class="titulo__cabecalho">Pedidos</h2>
+        </button> <!-- Inicialmente escondido -->
+           
+            <ul id="orderList"></ul>
+            <!-- Botão para fechar a lista -->
+        </div>
+    </main>
+
+    <audio id="notificationSound" src="../../assets/uber driver 2019 _ Sound Effect.mp3" preload="auto" loop></audio>
+    <div id="notificationBall"></div> <!-- Bolinha de notificação -->
+    <button class="show-orders-button" onclick="toggleOrderList()">Mostrar Pedidos</button>
+
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-database-compat.js"></script>
+    <script src="../../firebase-database-ticket.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="../../JS/mapa.js"> </script>
+    <script src="../../JS/checagem_adm.js" defer></script>
+    <script src="../../menu.js"></script>
+    <script src="../../voltar.js"></script>
+       
+   
+</body>
+</html>

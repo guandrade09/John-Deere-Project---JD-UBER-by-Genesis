@@ -1,0 +1,53 @@
+@import url(../../style.css);
+
+.titulo {
+    font-weight: 600;
+    font-size: 50px;
+    margin: 1em 2em 0 0.75em;
+}
+
+.itens {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Define 2 colunas de tamanhos iguais */
+    gap: 25px; /* Espaçamento entre as linhas e colunas de itens */
+    width: 100%;
+}
+
+.itens__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; /* Alinha o texto ao fundo do item */
+    text-align: center;
+    margin-top: 2em;
+}
+
+.btn {
+    background: none; /* Remove o fundo padrão do botão */
+    border: none; /* Remove a borda padrão do botão */
+    padding: 0; /* Remove o padding do botão */
+    cursor: pointer; /* Adiciona o cursor de pointer para indicar que é clicável */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn img {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: auto; /* Ajusta a altura para manter a proporção */
+    display: block; /* Remove espaços em branco abaixo da imagem */
+}
+
+.lista__item {
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 25px;
+    white-space: nowrap; /* Impede a quebra de linha no texto */
+    overflow: hidden; /* Esconde o texto que excede a largura do contêiner */
+    text-overflow: ellipsis; /* Adiciona "..." no final do texto que ultrapassar */
+}
+
+/* Posiciona o segundo item na segunda coluna */
+.itens__item:nth-child(2) {
+    grid-column: 2;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket</title>
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="stylesheet" href="../../style/adm/ticket.css">
+    <link rel="stylesheet" href="../../style/menu.css">
+</head>
+<body>
+    <header class="header">
+        <div id="menu-container" class="menu-container"></div>
+
+        
+    </header>
+    <div class="container">
+        <header>
+            <button class="back-button" id="btnVoltar">
+                <img src="../../assets/seta__esquerda.png">
+                <h1>Ticket</h1>
+            </button>
+            
+        </header>
+        <section class="botoes">
+        <ul id="ticket-list">
+            <!-- Os tickets aparecerão aqui -->
+        </ul>
+    </section>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-database-compat.js"></script>
+    <script src="../../firebase-database-ticket.js"></script>
+    <script src="../../JS/ticket.js"></script>
+    <script src="../../voltar.js"></script>
+    <script src="../../menu.js"></script>
+    <script src="../../JS/checagem_adm.js" defer></script>
+</body>
+</html>

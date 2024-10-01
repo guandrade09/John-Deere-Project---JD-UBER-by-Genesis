@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Ticket</title>
+    <!-- CSS externo para estilização -->
+    <link rel="stylesheet" href="../../style/adm/ticket_detalhes.css">
+    <link rel="stylesheet" href="../../style/menu.css">
+</head>
+<body>
+    <header class="header">
+        <div id="menu-container" class="menu-container"></div>
+    </header>
+
+    <header>
+        <button class="botao__cabecalho" id="btnVoltar">
+            <img class="seta__esquerda" src="../../assets/seta__esquerda.png" alt="Seta esquerda">
+            <h2 class="titulo__cabecalho">Detalhes</h2>
+        </button>
+    </header>
+
+    <main>
+        <!-- Seção para o status da operação -->
+        <section id="status-operation">
+            <h2>Status da Operação</h2>
+            <p id="status-text">Carregando status...</p>
+        </section>
+
+        <!-- Seção principal para os detalhes do ticket -->
+        <section id="ticket-details">
+            <h1 id="ticket-number"></h1>
+            <div class="ticket-content">
+                <img src="../../assets/fabrica.jpg" alt="Imagem do Ticket" class="ticket-image">
+                <div class="ticket-info">
+                    <!-- Detalhes do ticket serão inseridos aqui pelo JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts externos para Firebase e funcionalidades de tickets -->
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-database-compat.js" defer></script>
+    <script src="../../firebase-database-ticket.js" defer></script>
+    <script src="../../JS/ticket-detalhes.js" defer></script>
+    <script src="../../JS/checagem_adm.js" defer></script>
+    <script src="../../voltar.js"></script>
+    <script src="../../menu.js"></script>
+
+    
+</body>
+</html>

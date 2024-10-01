@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Usuários</title>
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="stylesheet" href="../../style/adm/ver_usuarios.css">
+    <link rel="stylesheet" href="../../style/menu.css">
+</head>
+<body>
+
+    <header class="header">
+        <div id="menu-container" class="menu-container"></div>
+
+        
+    </header>
+    <button class="botao__cabecalho" id="btnVoltar">
+        <img class="seta__esquerda" src="../../assets/seta__esquerda.png" alt="Voltar">
+        <h2 class="titulo__cabecalho">Ver Usuários</h2>
+      </button>
+    <h1>Lista de usuários</h1>
+    <section class="barra__pesquisa">
+        <div class="searchBox">
+            <input class="searchInput" id="searchInput" type="text" name="" placeholder="Pesquisar...">
+            
+        </div>
+    </section>
+    <div class="card">
+        <div class="card__title">Usuários</div>
+        <div class="card__data" id="userList">
+            <!-- Os dados dos usuários serão inseridos aqui via JavaScript -->
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-database-compat.js"></script>
+    <script src="../../JS/checagem_adm.js" defer></script>
+    <script src="../../firebase-database.js"></script> 
+    <script src="../../JS/ver_usuarios.js"></script> <!-- Arquivo JS para carregar os usuários -->
+    <script src="../../voltar.js"></script>
+    <script src="../../menu.js"></script>
+</body>
+</html>

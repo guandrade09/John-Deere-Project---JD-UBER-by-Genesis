@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style/login.css">
+</head>
+<body>
+  <header></header>
+  <main>
+    <section class="imagem__secao">
+      <img class="imagem" src="assets/JDGrande.png" alt="Emblema JD Grande">
+    </section>
+    <section class="login">
+      <div class="container">
+        <form class="form" id="loginForm">
+          <input placeholder="Nome" id="nome" name="nome" type="text" class="input" required onchange="validateFields()" />
+          <input placeholder="Senha" id="password" name="password" type="password" class="input" required onchange="validateFields()"/>
+          <button type="submit" class="login-button" disabled id="login-button">Avançar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer></footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-database-compat.js"></script>
+  <script src="firebase-database.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

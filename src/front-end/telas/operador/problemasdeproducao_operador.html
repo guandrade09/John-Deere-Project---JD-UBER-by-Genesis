@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="stylesheet" href="../../style/operador/problemasdeproducao_operador.css">
+    <link rel="stylesheet" href="../../style/menu.css">
+</head>
+<body>
+    <header class="header">
+        <div id="menu-container" class="menu-container"></div>
+
+        
+    </header>
+    <header>
+        <button class="botao__cabecalho" id="btnvoltar">
+            <img class="seta__esquerda" src="../../assets/seta__esquerda.png" alt="Seta esquerda">
+            <h2 class="titulo__cabecalho">Problemas na produção</h2>
+        </button>
+    </header>
+    <main>
+        <section class="impacto__producao">
+            <h3 class="titulo__impacto__producao">Impacto na produção</h3>
+            <div>
+                <label class="container">
+                    <input type="checkbox" name="impacto" id="impacto-alto">
+                    <div class="checkmark"></div>
+                    <h4 for="impacto-alto">Alto</h4>
+                </label>
+            </div>
+            <div>
+                <label class="container">
+                    <input type="checkbox" name="impacto" id="impacto-medio">
+                    <div class="checkmark"></div>
+                    <h4 for="impacto-medio">Médio</h4>
+                </label>
+            </div>
+            <div>
+                <label class="container">
+                    <input type="checkbox" name="impacto" id="impacto-baixo">
+                    <div class="checkmark"></div>
+                    <h4 for="impacto-baixo">Baixo</h4>
+                </label>
+            </div>
+        </section>
+        <section class="problemas__producao">
+            <h3 class="titulo__impacto__producao">Problemas na produção</h3>
+            <div>
+                <label class="container">
+                    <input type="checkbox" name="impacto1" id="problemas-kits">
+                    <div class="checkmark"></div>
+                    <h4 for="problemas-kits">Kits</h4>
+                </label>
+            </div>
+            <div>
+                <label class="container">
+                    <input type="checkbox" name="impacto1" id="problemas-pecas">
+                    <div class="checkmark"></div>
+                    <h4 for="problemas-pecas">Peças</h4>
+                </label>
+            </div>
+            <div>
+                <label class="container">
+                    <input type="checkbox" name="impacto1" id="problemas-maquinario">
+                    <div class="checkmark"></div>
+                    <h4 for="problemas-maquinario">Maquinário</h4>
+                </label>
+            </div>
+        </section>
+        <button class="button">
+            Enviar
+            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+              <path
+                clip-rule="evenodd"
+                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+        </button>
+        
+    </main>
+    
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-database-compat.js"></script>
+    <script src="../../firebase-database-ticket.js"></script>
+    <script src="../../JS/problemasdeproduçãoOp.js"></script>
+    <script src="../../JS/checagem_adm.js" defer></script>
+
+    <script src="../../voltar.js"></script>
+    <script src="../../menu.js"></script>
+    
+</body>
+</html>

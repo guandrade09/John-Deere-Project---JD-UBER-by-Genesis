@@ -1,0 +1,178 @@
+@import url(../../style.css);
+
+
+body {
+
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.titulo__cabecalho {
+    font-size: 1.5em;
+}
+
+.botao__cabecalho {
+    background: none;
+    border: none;
+    display: flex;
+    
+    gap: 1em;
+    margin: 1em;
+    font-weight: 600;
+    color: #000000;
+    
+    max-width: 600px; /* Limita a largura máxima para dispositivos maiores */
+    padding: 10px; /* Espaçamento interno */
+   
+    cursor: pointer; /* Muda o cursor para pointer */
+    transition: background-color 0.3s, transform 0.2s; /* Transição suave */
+}
+
+.corpo {
+
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.barra__pesquisa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchBox {
+    display: flex;
+    width: 80vw;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background: #ffffff;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+}
+
+
+
+.botaolista:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.searchInput {
+    border: none;
+    background: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    padding: 24px 20px 24px 26px;
+    width: 80vw;
+}
+
+/* Estilo dos botões */
+.botaolista {
+    background-color: #4CAF50; /* Cor de fundo */
+    color: rgb(0, 0, 0); /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: #ffffff; /* Para garantir que o fundo seja branco */
+    border: none;
+    border-radius: 8px;
+    width: 85vw; /* Largura do botão */
+    cursor: pointer; /* Muda o cursor para pointer ao passar o mouse */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); 
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 1em; /* Transição suave */
+    margin-bottom: 1em;
+}
+
+/* Efeito ao passar o mouse */
+.botaolista:hover {
+    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente o botão */
+    color: #ffffff;
+}
+
+/* Efeito ao pressionar o botão */
+.botaolista:active {
+    transform: scale(0.95); /* Reduz o tamanho do botão */
+}
+
+/* Estilo básico do modal */
+.modal {
+    display: none; /* Esconde o modal por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo da lista */
+.hidden {
+    display: none; /* Classe para esconder itens */
+}
+
+#kitsList {
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+
+  margin-top: 1em;
+}
+
+#modalMessage {
+
+  margin-bottom: 0.5em;
+}
+
+.botaoconfirmar {
+
+    background-color: var(--Verde-principal); /* Cor de fundo */
+    color: rgb(255, 255, 255); /* Cor do texto */
+    padding: 0.3em;
+    
+    border: none;
+    border-radius: 8px;
+    width: 25vw; /* Largura do botão */
+    cursor: pointer; /* Muda o cursor para pointer ao passar o mouse */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); 
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 1em; /* Transição suave */
+    margin-bottom: 1em;
+
+
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kits</title>
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="stylesheet" href="../../style/operador/pesquisa_kits-operador.css">
+    <link rel="stylesheet" href="../../style/menu.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.2.7/mqtt.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div id="menu-container" class="menu-container"></div>
+    </header>
+
+    <header class="cabecalho">
+        <button class="botao__cabecalho" id="btnVoltar">
+            <img class="seta__esquerda" src="../../assets/seta__esquerda.png">
+            <h2 class="titulo__cabecalho">Procurar</h2>
+        </button>
+
+        <main class="corpo"></main>
+        <section class="barra__pesquisa">
+            <div class="searchBox">
+                <input class="searchInput" type="text" placeholder="Pesquisar..." oninput="filterKits()">
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <ul id="kitsList">
+            <li><button class="botaolista" onclick="openModal('Kit motor', {x: 10, y: 20})">Kit motor</button></li>
+            <li><button class="botaolista" onclick="openModal('Kit rodado', {x: 30, y: 40})">Kit rodado</button></li>
+            <li><button class="botaolista" onclick="openModal('Kit chassi', {x: 50, y: 60})">Kit chassi</button></li>
+            <li><button class="botaolista" onclick="openModal('Kit carenagem', {x: 70, y: 80})">Kit carenagem</button></li>
+            <li><button class="botaolista" onclick="openModal('Kit cabine', {x: 90, y: 100})">Kit cabine</button></li>
+        </ul>
+    </main>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Fazer Pedido</h2>
+            <p id="modalMessage">Você deseja fazer o pedido deste kit?</p>
+            <button class="botaoconfirmar" onclick="makeOrder()">Confirmar Pedido</button>
+        </div>
+    </div>
+</main>
+
+    <script src="../../voltar.js"></script>
+    <script src="../../menu.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-database-compat.js"></script>
+    <script src="../../firebase-database-ticket.js"></script>
+    <script src="../../JS/checagem_adm.js" defer></script>
+    <script>
+        const database = firebase.database();
+
+        // Função para abrir o modal
+        function openModal(kitName, coordinates) {
+            document.getElementById("modalTitle").innerText = kitName;
+            const modal = document.getElementById("myModal");
+            modal.dataset.coordinates = JSON.stringify(coordinates); // Armazena as coordenadas em formato JSON
+            modal.style.display = "block";
+        }
+
+        // Função para fechar o modal
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        // Função para simular a confirmação do pedido
+        function makeOrder() {
+            const kitName = document.getElementById("modalTitle").innerText;
+            const modal = document.getElementById("myModal");
+            const coordinates = JSON.parse(modal.dataset.coordinates); // Obtém as coordenadas
+            
+            const orderData = {
+                kitName: kitName,
+                status: "Aguardando aceitação...",
+                timestamp: new Date().toISOString(),
+                coordinates: coordinates // Adiciona as coordenadas ao pedido
+            };
+
+            // Envia os dados do pedido para o Firebase
+            const newOrderRef = database.ref('pedidos').push();
+            newOrderRef.set(orderData)
+                .then(() => {
+                    alert("Pedido realizado com sucesso!");
+                    closeModal(); // Fecha o modal após a confirmação
+                })
+                .catch((error) => {
+                    console.error("Erro ao enviar o pedido: ", error);
+                    alert("Erro ao realizar o pedido. Tente novamente.");
+                });
+        }
+
+        // Função para filtrar a lista de kits
+        function filterKits() {
+            const input = document.querySelector('.searchInput');
+            const filter = input.value.toLowerCase();
+            const listItems = document.querySelectorAll('#kitsList li');
+
+            listItems.forEach(item => {
+                const button = item.querySelector('button');
+                const text = button.innerText.toLowerCase();
+                if (text.includes(filter)) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+
+        // Fecha o modal quando o usuário clica fora da área do conteúdo
+        window.onclick = function(event) {
+            const modal = document.getElementById("myModal");
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+
+</body>
+
+</html>

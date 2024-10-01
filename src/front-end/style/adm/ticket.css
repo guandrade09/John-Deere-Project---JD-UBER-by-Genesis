@@ -1,0 +1,45 @@
+@import url(../../style.css);
+
+
+
+.back-button {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    font-size: 1.3em;
+    font-weight: 600;
+    gap: 0.5em;
+    margin: 1em;
+}
+
+
+
+.ticket-button {
+    margin: 10px 15px 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    width: 95%;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Adiciona a sombra aos botões */
+}
+
+
+.ticket-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+span {
+
+    margin-left: 2em;
+    font-weight: 700;
+}

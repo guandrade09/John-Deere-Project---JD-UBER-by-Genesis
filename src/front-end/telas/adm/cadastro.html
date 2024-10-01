@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  
+  <!-- Reset CSS -->
+  <link rel="stylesheet" href="../../reset.css">
+  
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="../../style/adm/cadastro.css">
+  <link rel="stylesheet" href="../../style/menu.css">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div id="menu-container" class="menu-container"></div>
+  </header>
+
+  <!-- Botão de Voltar -->
+  <button class="botao__cabecalho" id="btnVoltar">
+    <img class="seta__esquerda" src="../../assets/seta__esquerda.png" alt="Voltar">
+    <h2 class="titulo__cabecalho">Cadastro</h2>
+  </button>
+
+  <!-- Seção de Formulário de Cadastro -->
+  <section class="formulario">
+    <form class="form" id="registerForm">
+      <span class="title">Registro</span>
+      
+      <!-- Campo de Nome -->
+      <label for="nome" class="label">Nome</label>
+      <input type="text" id="nome" name="nome" class="input" required>
+
+      <!-- Campo de Email -->
+      <label for="email" class="label">Email</label>
+      <input type="email" id="email" name="email" class="input" required>
+
+      <!-- Campo de Senha -->
+      <label for="password" class="label">Senha</label>
+      <input type="password" id="password" name="password" class="input" required>
+
+      <!-- Botões de Rádio para Seleção de Função -->
+      <div class="radio-input">
+        <label class="label">
+          <input type="radio" id="value-1" name="value-radio" value="operador">
+          <p class="text">Operador</p>
+        </label>
+        <label class="label">
+          <input type="radio" id="value-2" name="value-radio" value="rebocador">
+          <p class="text">Rebocador</p>
+        </label>
+      </div>
+
+      <!-- Botão de Enviar -->
+      <button type="submit" class="submit">Registrar</button>
+    </form>  
+  </section>
+
+  <!-- Scripts do Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-database-compat.js"></script>
+
+  <!-- Scripts Personalizados -->
+  <script src="../../firebase-database.js"></script>
+  <script src="../../JS/checagem_adm.js"></script>
+  <script src="../../JS/cadastro.js"></script>
+  <script src="../../voltar.js"></script>
+  <script src="../../menu.js"></script>
+  <script src="../../JS/checagem_adm.js" defer></script>
+
+  
+  
+</body>
+</html>

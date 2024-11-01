@@ -1,4 +1,5 @@
-![image](https://github.com/user-attachments/assets/e05a4a71-57a5-415a-9a34-d89a3944f48a)# JD UBER - Projeto Challenge John Deere - FIAP
+
+JD UBER - Projeto Challenge John Deere - FIAP
 Grupo Genesis 1ECR - Engenharia da Computação
 
 # Introdução
